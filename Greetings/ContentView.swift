@@ -7,15 +7,24 @@
 
 import SwiftUI
 
+struct DataItemModel {
+    let text: String
+    let colo: Color
+}
+
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+        
+        VStack (alignment: .leading) {
+            
+            TextView(text: "Hello There!", color: .red)
+            TextView(text: "Hi", color: .black)
+            TextView(text: "Ready!", color: .gray)
+            TextView(text: "Hello, world!", color: .blue)
+            TextView(text: "Tanks for coming!", color: .green)
+            
+            }
+            .padding()
     }
 }
 

@@ -8,11 +8,21 @@
 import SwiftUI
 
 struct TextView: View {
+    
+    let text: String
+    let color: Color
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        Text(text)
+            .padding()
+            .foregroundStyle(.white)
+            .background(color.opacity(0.6))
+            .cornerRadius(15.0)
+            .shadow(color: color ,radius: 5, x: 3,y: 3)
     }
 }
 
 #Preview {
-    TextView()
+    TextView(text: "Hello There!", color: .red)
 }
