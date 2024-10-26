@@ -7,11 +7,6 @@
 
 import SwiftUI
 
-struct DataItemModel {
-    let text: String
-    let color: Color
-}
-
 struct ContentView: View {
     
     let message: [DataItemModel] = [
@@ -26,7 +21,9 @@ struct ContentView: View {
         
         VStack (alignment: .leading) {
             
-            TextView(text: message[0].text, color: message[0].color)
+            ForEach (message) { data in
+                TextView(text: data.text, color: data.color)
+            }
             
         }
             .padding()
