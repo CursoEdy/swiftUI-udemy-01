@@ -9,7 +9,14 @@ import SwiftUI
 
 struct TitleView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        //Title
+        VStack (alignment: .leading, spacing: 0) {
+            Text("Greetings")
+                .font(.largeTitle)
+                .fontWeight(.thin)
+            Text("Exploring IOS programing")
+                .font(.headline)
+        }
     }
 }
 
