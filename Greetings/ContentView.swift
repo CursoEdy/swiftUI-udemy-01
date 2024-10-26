@@ -21,10 +21,20 @@ struct ContentView: View {
         
         VStack (alignment: .leading) {
             
+            VStack (alignment: .leading, spacing: 0) {
+                Text("Greetings")
+                    .font(.largeTitle)
+                    .fontWeight(.thin)
+                Text("Exploring IOS programing")
+                    .font(.headline)
+            }
+            
+            Spacer()
             ForEach (message) { data in
                 TextView(text: data.text, color: data.color)
             }
-            
+            Spacer()
+            Spacer()
         }
             .padding()
     }
